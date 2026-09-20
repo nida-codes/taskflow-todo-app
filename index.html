@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskFlow - To-Do List</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Application Header -->
+        <header>
+            <h1>TaskFlow</h1>
+            <p>Manage your daily tasks easily</p>
+        </header>
+
+
+        <!-- Add Task Section -->
+        <section class="add-task">
+
+            <input 
+                type="text" 
+                id="taskInput" 
+                placeholder="Enter a new task..."
+            >
+
+            <button id="addTaskBtn">Add Task</button>
+
+        </section>
+
+
+        <!-- Task Statistics -->
+        <section class="statistics">
+
+            <div class="stat-card">
+                <h3 id="totalTasks">0</h3>
+                <p>Total Tasks</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 id="completedTasks">0</h3>
+                <p>Completed</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 id="pendingTasks">0</h3>
+                <p>Pending</p>
+            </div>
+
+        </section>
+
+
+        <!-- Task List -->
+        <section class="task-section">
+
+            <h2>My Tasks</h2>
+
+            <ul id="taskList">
+                <!-- JavaScript will add tasks here -->
+            </ul>
+
+        </section>
+
+
+        <!-- Clear All Button -->
+        <section class="actions">
+
+            <button id="clearAllBtn">Clear All Tasks</button>
+
+        </section>
+
+    </div>
+
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+```
