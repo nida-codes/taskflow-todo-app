@@ -190,3 +190,34 @@ footer {
     padding: 20px;
     color: #777;
 }
+/* Responsive Design */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 95%;
+        margin: 25px auto;
+    }
+
+    .add-task {
+        flex-direction: column;
+    }
+
+    .add-task button {
+        width: 100%;
+    }
+
+    .statistics {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    #taskList li {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    #taskList li button {
+        margin-left: auto;
+    }
+}
