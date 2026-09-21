@@ -1,89 +1,200 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>TaskFlow - To-Do List</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+
+        <div class="nav-logo">
+            TaskFlow
+        </div>
+
+        <div class="nav-links">
+            <a href="#" data-page="home">Home</a>
+            <a href="#" data-page="tasks">Tasks</a>
+            <a href="#" data-page="completed">Completed</a>
+            <a href="#" data-page="pending">Pending</a>
+            <a href="#" data-page="statistics">Statistics</a>
+            <a href="#" data-page="about">About</a>
+        </div>
+
+    </nav>
+
+
     <div class="container">
 
-        <!-- Application Header -->
-        <header>
-            <h1>TaskFlow</h1>
-            <p>Manage your daily tasks easily</p>
-        </header>
+        <!-- Home Page -->
+        <main id="homePage" class="page active-page">
+
+            <header>
+                <h1>TaskFlow</h1>
+                <p>Manage your daily tasks easily</p>
+            </header>
+
+            <!-- Add Task -->
+            <section class="add-task">
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Enter a new task..."
+                >
+
+                <button id="addTaskBtn">Add Task</button>
+
+            </section>
+
+            <!-- Statistics -->
+            <section class="statistics">
+
+                <div class="stat-card">
+                    <h3 id="homeTotalTasks">0</h3>
+                    <p>Total Tasks</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3 id="homeCompletedTasks">0</h3>
+                    <p>Completed</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3 id="homePendingTasks">0</h3>
+                    <p>Pending</p>
+                </div>
+
+            </section>
+
+            <!-- Recent Tasks -->
+            <section class="task-section">
+
+                <h2>My Tasks</h2>
+
+                <ul id="taskList"></ul>
+
+            </section>
+
+            <section class="actions">
+                <button id="clearAllBtn">Clear All Tasks</button>
+            </section>
+
+        </main>
 
 
-        <!-- Add Task Section -->
-        <section class="add-task">
+        <!-- Tasks Page -->
+        <main id="tasksPage" class="page">
 
-            <input 
-                type="text" 
-                id="taskInput" 
-                placeholder="Enter a new task..."
-            >
-
-            <button id="addTaskBtn">Add Task</button>
-
-        </section>
-
-
-        <!-- Task Statistics -->
-        <section class="statistics">
-
-            <div class="stat-card">
-                <h3 id="totalTasks">0</h3>
-                <p>Total Tasks</p>
+            <div class="page-header">
+                <h1>All Tasks</h1>
+                <p>View and manage all your tasks.</p>
             </div>
 
-            <div class="stat-card">
-                <h3 id="completedTasks">0</h3>
-                <p>Completed</p>
+            <section class="task-section">
+
+                <ul id="allTasksList"></ul>
+
+            </section>
+
+        </main>
+
+
+        <!-- Completed Page -->
+        <main id="completedPage" class="page">
+
+            <div class="page-header">
+                <h1>Completed Tasks</h1>
+                <p>Here are all your completed tasks.</p>
             </div>
 
-            <div class="stat-card">
-                <h3 id="pendingTasks">0</h3>
-                <p>Pending</p>
+            <section class="task-section">
+
+                <ul id="completedList"></ul>
+
+            </section>
+
+        </main>
+
+
+        <!-- Pending Page -->
+        <main id="pendingPage" class="page">
+
+            <div class="page-header">
+                <h1>Pending Tasks</h1>
+                <p>Here are the tasks you still need to complete.</p>
             </div>
 
-        </section>
+            <section class="task-section">
+
+                <ul id="pendingList"></ul>
+
+            </section>
+
+        </main>
 
 
-        <!-- Task List -->
-        <section class="task-section">
+        <!-- Statistics Page -->
+        <main id="statisticsPage" class="page">
 
-            <h2>My Tasks</h2>
+            <div class="page-header">
+                <h1>Task Statistics</h1>
+                <p>See your task progress.</p>
+            </div>
 
-            <ul id="taskList">
-                <!-- JavaScript will add tasks here -->
-            </ul>
+            <section class="statistics">
 
-        </section>
+                <div class="stat-card">
+                    <h3 id="statisticsTotal">0</h3>
+                    <p>Total Tasks</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3 id="statisticsCompleted">0</h3>
+                    <p>Completed</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3 id="statisticsPending">0</h3>
+                    <p>Pending</p>
+                </div>
+
+            </section>
+
+        </main>
 
 
-        <!-- Clear All Button -->
-        <section class="actions">
+        <!-- About Page -->
+        <main id="aboutPage" class="page">
 
-            <button id="clearAllBtn">Clear All Tasks</button>
+            <div class="page-header">
+                <h1>About TaskFlow</h1>
+                <p>Simple task management for your daily activities.</p>
+            </div>
 
-        </section>
+            <section class="about">
+
+                <h2>What is TaskFlow?</h2>
+
+                <p>
+                    TaskFlow is a simple to-do list application that helps
+                    users organize, track, and manage their daily tasks.
+                </p>
+
+            </section>
+
+        </main>
 
     </div>
 
 
-    <!-- JavaScript File -->
     <script src="script.js"></script>
 
 </body>
 
 </html>
-```
