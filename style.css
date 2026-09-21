@@ -1,7 +1,5 @@
 
-/* ==============================
-   General Page Styling
-   ============================== */
+/* General Page Styling */
 
 * {
     margin: 0;
@@ -17,9 +15,7 @@ body {
 }
 
 
-/* ==============================
-   Main Container
-   ============================== */
+/* Main Container */
 
 .container {
     width: 90%;
@@ -28,9 +24,7 @@ body {
 }
 
 
-/* ==============================
-   Header
-   ============================== */
+/* Header */
 
 header {
     text-align: center;
@@ -49,9 +43,7 @@ header p {
 }
 
 
-/* ==============================
-   Add Task Section
-   ============================== */
+/* Add Task Section */
 
 .add-task {
     display: flex;
@@ -73,23 +65,26 @@ header p {
 }
 
 .add-task button {
-    padding: 14px 22px;
+    padding: 14px 24px;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     background-color: #4f46e5;
     color: white;
     font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(79, 70, 229, 0.25);
 }
 
 .add-task button:hover {
     background-color: #3730a3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(79, 70, 229, 0.3);
 }
 
 
-/* ==============================
-   Statistics
-   ============================== */
+/* Statistics */
 
 .statistics {
     display: flex;
@@ -117,9 +112,7 @@ header p {
 }
 
 
-/* ==============================
-   Task Section
-   ============================== */
+/* Task Section */
 
 .task-section {
     background-color: white;
@@ -133,9 +126,7 @@ header p {
 }
 
 
-/* ==============================
-   Task List
-   ============================== */
+/* Task List */
 
 #taskList {
     list-style: none;
@@ -149,10 +140,25 @@ header p {
     border-bottom: 1px solid #eee;
 }
 
+/* Task Delete Button */
 
-/* ==============================
-   Clear All Button
-   ============================== */
+#taskList li button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ef4444;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#taskList li button:hover {
+    background-color: #b91c1c;
+    transform: translateY(-1px);
+}
+
+/* Clear All Button */
 
 .actions {
     text-align: right;
@@ -160,22 +166,23 @@ header p {
 }
 
 #clearAllBtn {
-    padding: 12px 18px;
+    padding: 12px 20px;
     border: none;
     border-radius: 8px;
     background-color: #dc2626;
     color: white;
+    font-size: 15px;
+    font-weight: bold;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 #clearAllBtn:hover {
-    background-color: #b91c1c;
+    background-color: #991b1b;
+    transform: translateY(-1px);
 }
 
-
-/* ==============================
-   Footer
-   ============================== */
+/* Footer */
 
 footer {
     text-align: center;
